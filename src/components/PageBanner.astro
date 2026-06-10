@@ -1,0 +1,29 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<section class="relative pt-28 pb-16 lg:pt-36 lg:pb-20 bg-stone-50">
+  <!-- Subtle top line -->
+  <div class="absolute top-0 left-0 right-0 h-px bg-stone-200"></div>
+
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center gap-3 mb-6">
+      <div class="w-6 h-px bg-accent"></div>
+      <span class="text-[10px] tracking-[0.3em] text-stone-400 uppercase">
+        {title === '关于我们' ? 'About' : title === '服务项目' ? 'Services' : title === '新闻动态' ? 'News' : 'Contact'}
+      </span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 tracking-tight mb-3">{title}</h1>
+    {description && <p class="text-stone-500 text-base lg:text-lg max-w-xl">{description}</p>}
+    <nav class="mt-6 text-xs text-stone-400 tracking-wider">
+      <a href="/" class="hover:text-primary transition-colors">首页</a>
+      <span class="mx-2 text-stone-300">/</span>
+      <span class="text-stone-600">{title}</span>
+    </nav>
+  </div>
+</section>

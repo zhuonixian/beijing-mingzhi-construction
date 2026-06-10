@@ -1,0 +1,26 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageBanner from '@/components/PageBanner.astro';
+import NewsCard from '@/components/NewsCard.astro';
+import { news } from '@/data/news';
+---
+
+<BaseLayout title="新闻动态">
+  <PageBanner title="新闻动态" description="了解公司最新动态和行业资讯" />
+
+  <section class="py-16 lg:py-24 bg-stone-50">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {news.map(post => (
+          <NewsCard
+            title={post.title}
+            date={post.date}
+            excerpt={post.excerpt}
+            slug={post.slug}
+            category={post.category}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

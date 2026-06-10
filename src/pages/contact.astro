@@ -1,0 +1,74 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageBanner from '@/components/PageBanner.astro';
+import ContactForm from '@/components/ContactForm.astro';
+---
+
+<BaseLayout title="联系我们">
+  <PageBanner title="联系我们" description="欢迎联系我们，我们将竭诚为您服务" />
+
+  <section class="py-16 lg:py-24 bg-stone-50">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        <!-- 联系信息 -->
+        <div class="lg:col-span-4">
+          <h2 class="text-xl font-bold text-stone-900 mb-8">联系信息</h2>
+
+          <div class="space-y-6 mb-10">
+            <div>
+              <span class="text-[10px] tracking-[0.2em] text-stone-400 uppercase block mb-1">企业名称</span>
+              <p class="text-sm text-stone-700">北京铭挚建筑工程有限公司</p>
+            </div>
+            <div>
+              <span class="text-[10px] tracking-[0.2em] text-stone-400 uppercase block mb-1">地址</span>
+              <p class="text-sm text-stone-700">北京市门头沟区中门寺街69号33幢6349号</p>
+            </div>
+            <div>
+              <span class="text-[10px] tracking-[0.2em] text-stone-400 uppercase block mb-1">统一社会信用代码</span>
+              <p class="text-sm text-stone-700 font-mono tracking-wider">91110109MAE8XY2PXA</p>
+            </div>
+            <div>
+              <span class="text-[10px] tracking-[0.2em] text-stone-400 uppercase block mb-1">成立时间</span>
+              <p class="text-sm text-stone-700">2024年12月31日</p>
+            </div>
+          </div>
+
+          <div class="border-t border-stone-200 pt-6">
+            <h3 class="text-[10px] tracking-[0.2em] text-stone-400 uppercase mb-4">主营业务</h3>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-sm text-stone-500">
+                <div class="w-1 h-1 bg-accent rounded-full"></div>
+                建设工程施工
+              </li>
+              <li class="flex items-center gap-2 text-sm text-stone-500">
+                <div class="w-1 h-1 bg-accent rounded-full"></div>
+                建筑劳务分包
+              </li>
+              <li class="flex items-center gap-2 text-sm text-stone-500">
+                <div class="w-1 h-1 bg-accent rounded-full"></div>
+                施工专业作业
+              </li>
+              <li class="flex items-center gap-2 text-sm text-stone-500">
+                <div class="w-1 h-1 bg-accent rounded-full"></div>
+                专业设计服务
+              </li>
+              <li class="flex items-center gap-2 text-sm text-stone-500">
+                <div class="w-1 h-1 bg-accent rounded-full"></div>
+                工程管理服务
+              </li>
+              <li class="flex items-center gap-2 text-sm text-stone-500">
+                <div class="w-1 h-1 bg-accent rounded-full"></div>
+                物业管理
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 留言表单 -->
+        <div class="lg:col-span-8">
+          <ContactForm />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

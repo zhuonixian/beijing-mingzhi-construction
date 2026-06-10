@@ -1,0 +1,57 @@
+---
+import Navbar from '@/components/Navbar.astro';
+import Footer from '@/components/Footer.astro';
+import '@/styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const { title, description = '北京铭挚建筑工程有限公司 — 专注建设工程施工、建筑劳务分包、专业设计服务、工程管理服务', ogImage = '/images/hero/default.jpg' } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const fullTitle = title === '首页' ? '北京铭挚建筑工程有限公司' : `${title} - 北京铭挚建筑工程有限公司`;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{fullTitle}</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ConstructionBusiness",
+      "name": "北京铭挚建筑工程有限公司",
+      "url": Astro.site?.toString(),
+      "description": description,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "北京市",
+        "addressRegion": "北京",
+        "streetAddress": "门头沟区中门寺街69号33幢6349号",
+        "addressCountry": "CN"
+      },
+      "foundingDate": "2024-12-31"
+    })} />
+  </head>
+  <body class="bg-stone-50 text-stone-800 font-sans antialiased">
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

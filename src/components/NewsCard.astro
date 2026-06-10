@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+  date: string;
+  excerpt: string;
+  slug: string;
+  category: string;
+}
+
+const { title, date, excerpt, slug, category } = Astro.props;
+---
+
+<a href={`/news/${slug}/`} class="group block bg-white border border-stone-200 p-6 lg:p-8 hover:border-stone-400 transition-all duration-300">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="text-[10px] tracking-[0.15em] text-stone-400 uppercase">{category}</span>
+    <span class="text-stone-300">·</span>
+    <time class="text-[10px] tracking-wider text-stone-400">{date}</time>
+  </div>
+  <h3 class="text-base font-semibold text-stone-800 mb-3 group-hover:text-primary transition-colors leading-snug">{title}</h3>
+  <p class="text-sm text-stone-500 leading-relaxed line-clamp-3 mb-4">{excerpt}</p>
+  <span class="inline-flex items-center gap-1 text-xs tracking-wider text-stone-400 group-hover:text-primary transition-colors">
+    阅读全文
+    <svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
+  </span>
+</a>
