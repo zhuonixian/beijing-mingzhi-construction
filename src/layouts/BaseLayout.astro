@@ -51,6 +51,11 @@ const fullTitle = title === '首页' ? '北京铭挚建筑工程有限公司' : 
   </head>
   <body class="bg-stone-50 text-stone-800 font-sans antialiased">
     <Navbar />
+    <script>
+      import Alpine from 'alpinejs';
+      Alpine.start();
+      window.Alpine = Alpine;
+    </script>
     <main>
       <slot />
     </main>
