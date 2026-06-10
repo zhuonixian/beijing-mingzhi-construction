@@ -1,29 +1,5 @@
 ---
-interface StatItem {
-  value: string;
-  label: string;
-}
 
-const stats: StatItem[] = [
-  { value: '800万', label: '注册资本' },
-  { value: '10+', label: '业务范围' },
-  { value: '100%', label: '品质承诺' },
-  { value: '24h', label: '服务响应' },
-];
 ---
 
-<section class="py-16 lg:py-20 bg-white border-y border-stone-200">
-  <div class="max-w-6xl mx-auto px-6 lg:px-8">
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-      {stats.map((stat, i) => (
-        <div class="text-center">
-          <div class="text-2xl lg:text-3xl font-bold text-stone-800 mb-1 tracking-tight">{stat.value}</div>
-          <div class="text-xs tracking-widest text-stone-400 uppercase">{stat.label}</div>
-          {i < stats.length - 1 && (
-            <div class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-8 bg-stone-200"></div>
-          )}
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+<!-- Removed standalone stats section - stats are integrated into Hero -->

@@ -7,14 +7,14 @@ import ContactForm from '@/components/ContactForm.astro';
 <BaseLayout title="联系我们">
   <PageBanner title="联系我们" description="欢迎联系我们，我们将竭诚为您服务" />
 
-  <section class="py-16 lg:py-24 bg-stone-50">
-    <div class="max-w-6xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-        <!-- 联系信息 -->
-        <div class="lg:col-span-4">
-          <h2 class="text-xl font-bold text-stone-900 mb-8">联系信息</h2>
+  <div class="section-divider"></div>
 
-          <div class="space-y-6 mb-10">
+  <section class="py-14 lg:py-20 bg-stone-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+        <div class="lg:col-span-4">
+          <h2 class="text-xl font-bold text-stone-900 mb-6">联系信息</h2>
+          <div class="space-y-5 mb-8">
             <div>
               <span class="text-[10px] tracking-[0.2em] text-stone-400 uppercase block mb-1">企业名称</span>
               <p class="text-sm text-stone-700">北京铭挚建筑工程有限公司</p>
@@ -24,7 +24,7 @@ import ContactForm from '@/components/ContactForm.astro';
               <p class="text-sm text-stone-700">北京市门头沟区中门寺街69号33幢6349号</p>
             </div>
             <div>
-              <span class="text-[10px] tracking-[0.2em] text-stone-400 uppercase block mb-1">统一社会信用代码</span>
+              <span class="text-[10px] tracking-[0.2em] text-stone-400 uppercase block mb-1">信用代码</span>
               <p class="text-sm text-stone-700 font-mono tracking-wider">91110109MAE8XY2PXA</p>
             </div>
             <div>
@@ -32,39 +32,18 @@ import ContactForm from '@/components/ContactForm.astro';
               <p class="text-sm text-stone-700">2024年12月31日</p>
             </div>
           </div>
-
-          <div class="border-t border-stone-200 pt-6">
-            <h3 class="text-[10px] tracking-[0.2em] text-stone-400 uppercase mb-4">主营业务</h3>
+          <div class="border-t border-stone-200 pt-5">
+            <span class="text-[10px] tracking-[0.2em] text-olive font-bold uppercase block mb-3">主营业务</span>
             <ul class="space-y-2">
-              <li class="flex items-center gap-2 text-sm text-stone-500">
-                <div class="w-1 h-1 bg-accent rounded-full"></div>
-                建设工程施工
-              </li>
-              <li class="flex items-center gap-2 text-sm text-stone-500">
-                <div class="w-1 h-1 bg-accent rounded-full"></div>
-                建筑劳务分包
-              </li>
-              <li class="flex items-center gap-2 text-sm text-stone-500">
-                <div class="w-1 h-1 bg-accent rounded-full"></div>
-                施工专业作业
-              </li>
-              <li class="flex items-center gap-2 text-sm text-stone-500">
-                <div class="w-1 h-1 bg-accent rounded-full"></div>
-                专业设计服务
-              </li>
-              <li class="flex items-center gap-2 text-sm text-stone-500">
-                <div class="w-1 h-1 bg-accent rounded-full"></div>
-                工程管理服务
-              </li>
-              <li class="flex items-center gap-2 text-sm text-stone-500">
-                <div class="w-1 h-1 bg-accent rounded-full"></div>
-                物业管理
-              </li>
+              {['建设工程施工', '建筑劳务分包', '施工专业作业', '专业设计服务', '工程管理服务', '物业管理'].map(item => (
+                <li class="flex items-center gap-2 text-sm text-stone-500">
+                  <svg class="w-3.5 h-3.5 text-olive shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  {item}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
-
-        <!-- 留言表单 -->
         <div class="lg:col-span-8">
           <ContactForm />
         </div>

@@ -1,13 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'Noto Serif SC';
-  font-style: normal;
-  font-weight: 400 900;
-  font-display: swap;
-  src: url('https://fonts.font.im/css2?family=Noto+Serif+SC:wght@400;600;700;900&display=swap');
-}
-
 @theme {
   --color-stone-50: #FAFAF9;
   --color-stone-100: #F5F5F4;
@@ -25,15 +17,72 @@
   --color-accent: #B8926A;
   --color-accent-light: #D4B896;
 
-  --font-sans: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', Georgia, serif;
-  --font-display: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+  --color-olive: #4A5D23;
+  --color-olive-dark: #3A4A1C;
+  --color-olive-light: #6B7F3A;
+  --color-olive-muted: #8A9A5C;
+  --color-brass: #C4A35A;
+  --color-brass-dark: #A08530;
+  --color-steel: #6B7B8D;
+  --color-charcoal: #2C2C2C;
+
+  --font-sans: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', Georgia, 'Times New Roman', serif;
+  --font-display: 'Noto Serif SC', 'Source Han Serif SC', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
 }
 
-*:focus-visible { outline: 1px solid var(--color-accent); outline-offset: 2px; }
+*:focus-visible { outline: 2px solid var(--color-olive); outline-offset: 2px; }
 img { max-width: 100%; }
 html { scroll-behavior: smooth; }
 
 ::selection {
-  background-color: #B8926A33;
+  background-color: #4A5D2333;
   color: #1C1917;
+}
+
+/* Military stencil label style */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #8A9A5C;
+  font-weight: 600;
+}
+
+.badge::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: #4A5D23;
+}
+
+/* Diagonal stripe decoration */
+.stripe-deco {
+  position: relative;
+}
+.stripe-deco::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 4px,
+    rgba(74,93,35,0.06) 4px,
+    rgba(74,93,35,0.06) 8px
+  );
+  pointer-events: none;
+}
+
+/* Section divider with chevron */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #E7E5E4 20%, #4A5D23 50%, #E7E5E4 80%, transparent);
 }

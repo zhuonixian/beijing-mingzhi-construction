@@ -8,27 +8,25 @@ import { categories, services } from '@/data/services';
 <BaseLayout title="服务项目">
   <PageBanner title="服务项目" description="全方位建筑工程服务体系" />
 
-  <section class="py-16 lg:py-24 bg-stone-50">
-    <div class="max-w-6xl mx-auto px-6 lg:px-8">
-      <!-- 分类 -->
-      <div class="flex flex-wrap gap-3 mb-12">
-        <a
-          href="/services/"
-          class="px-4 py-1.5 text-xs tracking-wider border border-stone-800 text-stone-800 bg-stone-800 text-white"
-        >
+  <div class="section-divider"></div>
+
+  <section class="py-14 lg:py-20 bg-stone-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap gap-2 mb-10">
+        <a href="/services/" class="px-4 py-1.5 text-xs tracking-wider bg-olive text-white font-semibold">
           全部
         </a>
         {categories.map(cat => (
           <a
             href={`/services/?category=${cat.slug}`}
-            class="px-4 py-1.5 text-xs tracking-wider border border-stone-300 text-stone-500 hover:border-stone-500 hover:text-stone-700 transition-colors"
+            class="px-4 py-1.5 text-xs tracking-wider border border-stone-300 text-stone-500 hover:border-olive hover:text-olive-dark transition-colors"
           >
             {cat.name}
           </a>
         ))}
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {services.map(service => (
           <ServiceCard
             name={service.name}

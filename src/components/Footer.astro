@@ -2,62 +2,63 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="border-t border-stone-200 bg-stone-50">
-  <div class="max-w-6xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
+<footer class="bg-stone-900 text-stone-400">
+  <!-- Top olive line -->
+  <div class="h-[2px] bg-gradient-to-r from-transparent via-olive/50 to-transparent"></div>
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-18">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
       <!-- Brand -->
-      <div class="lg:col-span-4">
-        <div class="flex items-center gap-3 mb-5">
-          <svg class="h-7 w-7 text-primary" viewBox="0 0 32 32" fill="none">
-            <rect x="2" y="8" width="28" height="22" stroke="currentColor" stroke-width="1.5" fill="none"/>
-            <path d="M16 2L2 8h28L16 2z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
-            <rect x="8" y="14" width="6" height="8" stroke="currentColor" stroke-width="1" fill="none"/>
-            <rect x="18" y="14" width="6" height="8" stroke="currentColor" stroke-width="1" fill="none"/>
-            <line x1="16" y1="14" x2="16" y2="30" stroke="currentColor" stroke-width="1"/>
+      <div class="sm:col-span-2 lg:col-span-4">
+        <div class="flex items-center gap-2.5 mb-5">
+          <svg class="h-6 w-6 text-brass" viewBox="0 0 32 32" fill="none">
+            <rect x="4" y="10" width="24" height="16" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <path d="M16 5L4 10h24L16 5z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+            <rect x="10" y="14" width="4" height="5" stroke="currentColor" stroke-width="0.75" fill="none"/>
+            <rect x="18" y="14" width="4" height="5" stroke="currentColor" stroke-width="0.75" fill="none"/>
           </svg>
-          <span class="font-semibold tracking-wide text-stone-800">铭挚建筑</span>
+          <span class="text-sm font-bold tracking-widest text-stone-200">铭挚建筑</span>
         </div>
-        <p class="text-sm text-stone-400 leading-relaxed max-w-xs">
-          北京铭挚建筑工程有限公司<br/>
-          以匠心筑品质，以诚信铸未来
+        <p class="text-xs text-stone-500 leading-relaxed max-w-xs">
+          以匠心筑品质，以诚信铸未来<br/>
+          安全第一 · 质量至上
         </p>
       </div>
 
       <!-- Navigation -->
       <div class="lg:col-span-2">
-        <h3 class="text-xs font-semibold tracking-widest uppercase text-stone-400 mb-4">导航</h3>
-        <ul class="space-y-2.5 text-sm">
-          <li><a href="/" class="text-stone-500 hover:text-primary transition-colors">首页</a></li>
-          <li><a href="/about/" class="text-stone-500 hover:text-primary transition-colors">关于我们</a></li>
-          <li><a href="/services/" class="text-stone-500 hover:text-primary transition-colors">服务项目</a></li>
-          <li><a href="/news/" class="text-stone-500 hover:text-primary transition-colors">新闻动态</a></li>
-          <li><a href="/contact/" class="text-stone-500 hover:text-primary transition-colors">联系我们</a></li>
+        <h3 class="text-[10px] font-bold tracking-[0.3em] text-stone-500 mb-4 uppercase">导航</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/" class="text-stone-400 hover:text-brass transition-colors">首页</a></li>
+          <li><a href="/about/" class="text-stone-400 hover:text-brass transition-colors">关于我们</a></li>
+          <li><a href="/services/" class="text-stone-400 hover:text-brass transition-colors">服务项目</a></li>
+          <li><a href="/news/" class="text-stone-400 hover:text-brass transition-colors">新闻动态</a></li>
+          <li><a href="/contact/" class="text-stone-400 hover:text-brass transition-colors">联系我们</a></li>
         </ul>
       </div>
 
       <!-- Services -->
       <div class="lg:col-span-3">
-        <h3 class="text-xs font-semibold tracking-widest uppercase text-stone-400 mb-4">主营业务</h3>
-        <ul class="space-y-2.5 text-sm">
-          <li class="text-stone-500">建设工程施工</li>
-          <li class="text-stone-500">建筑劳务分包</li>
-          <li class="text-stone-500">专业设计服务</li>
-          <li class="text-stone-500">工程管理服务</li>
+        <h3 class="text-[10px] font-bold tracking-[0.3em] text-stone-500 mb-4 uppercase">主营业务</h3>
+        <ul class="space-y-2 text-sm text-stone-500">
+          <li>建设工程施工</li>
+          <li>建筑劳务分包</li>
+          <li>专业设计服务</li>
+          <li>工程管理服务</li>
         </ul>
       </div>
 
       <!-- Contact -->
       <div class="lg:col-span-3">
-        <h3 class="text-xs font-semibold tracking-widest uppercase text-stone-400 mb-4">联系</h3>
-        <div class="text-sm text-stone-500 leading-relaxed">
-          <p>北京市门头沟区<br/>中门寺街69号33幢6349号</p>
-        </div>
+        <h3 class="text-[10px] font-bold tracking-[0.3em] text-stone-500 mb-4 uppercase">联系</h3>
+        <p class="text-sm text-stone-500 leading-relaxed">北京市门头沟区<br/>中门寺街69号33幢6349号</p>
       </div>
     </div>
 
-    <div class="border-t border-stone-200 mt-14 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-stone-400 tracking-wide">
+    <!-- Bottom bar -->
+    <div class="border-t border-stone-800 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-[11px] text-stone-600 tracking-wide">
       <p>&copy; {currentYear} 北京铭挚建筑工程有限公司</p>
-      <p>统一社会信用代码：91110109MAE8XY2PXA</p>
+      <p class="font-mono text-[10px] tracking-wider">USCC: 91110109MAE8XY2PXA</p>
     </div>
   </div>
 </footer>

@@ -8,9 +8,11 @@ import { news } from '@/data/news';
 <BaseLayout title="新闻动态">
   <PageBanner title="新闻动态" description="了解公司最新动态和行业资讯" />
 
-  <section class="py-16 lg:py-24 bg-stone-50">
-    <div class="max-w-6xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div class="section-divider"></div>
+
+  <section class="py-14 lg:py-20 bg-stone-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {news.map(post => (
           <NewsCard
             title={post.title}
